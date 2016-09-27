@@ -21,6 +21,7 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area">
+	<div class="comments-wrap">
 
 	<?php
 	// You can start editing here -- including this comment!
@@ -28,7 +29,7 @@ if ( post_password_required() ) {
 		<h2 class="comments-title">
 			<?php
 				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'riccellidesign' ) ),
+					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s comment on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'riccellidesign' ) ),
 					number_format_i18n( get_comments_number() ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -81,5 +82,5 @@ if ( post_password_required() ) {
 
 	comment_form();
 	?>
-
+</div><!-- comments-wrap -->
 </div><!-- #comments -->

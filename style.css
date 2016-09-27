@@ -364,7 +364,7 @@ object {
 # Custom Theme Specific Styles
 ========================================= */
 
-/* COLOUR REFERENCES
+/* COLOR REFERENCES
 
 Red:		rgb(240,93,94) -- #f05d5e
 Dark Grey:	rgb(46,60,64) -- #2e3c40
@@ -639,6 +639,10 @@ button[type="submit"] {
 	border-radius: 6px;
 }
 
+input[type="search"] {
+	border: 1px solid #ccc;
+}
+
 input[type="submit"]:hover,
 button[type="submit"]:hover {
 	outline: none;
@@ -714,10 +718,6 @@ input.error {
 #hero .hero-text {
 	margin-top: 30px;
 }
-
-
-
-
 /* ==== LAYOUT ==== */
 
 .row + .row {
@@ -754,7 +754,22 @@ section.main-content {
 	width: 100%;
 }
 
+.feature-image-default {
+	background: url('/wp-content/themes/bootstrap2wordpress/assets/img/stuff-feature.jpg') no-repeat;
+	background-size: cover;
+}
 
+.feature-image-default-alt {
+	background: url('/wp-content/themes/bootstrap2wordpress/assets/img/hipster-stuff.jpg') no-repeat;
+	background-size: cover;
+}
+
+.feature-image h1 {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	color: white;
+}
 
 
 #my-skills {
@@ -887,6 +902,7 @@ footer a:hover {
 	margin: 0 0 15px;
 	padding: 0 0 15px;
 	border-bottom: solid 1px #ddd;
+	font-weight: 700;
 }
 
 .post header h1 {
@@ -895,8 +911,10 @@ footer a:hover {
 	border-bottom: solid 1px #ddd;
 	font-size: 24px;
 }
-
-.post-image {
+.post > header.entry-header > h3 > a {
+	color: #f05d5e;
+}
+.post-image img {
 	height: auto;
 }
 
@@ -925,7 +943,7 @@ footer a:hover {
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
 	border-radius: 100px;
-	background: #79b044;
+	background: #f05d5e;
 	text-align: center;
 	display: table;
 }
@@ -946,7 +964,7 @@ footer a:hover {
 }
 
 .post-comments-badge:hover {
-	background-color: #8bc653;
+	background-color: #2e3c40;
 }
 
 #comments h3 {
@@ -985,6 +1003,27 @@ footer a:hover {
 	border-top: solid 1px #eee;
 }
 
+/* === SPECIFIC WORDPRESS COMMENT STYLES === */
+
+#comments footer {
+	background: none;
+	color: inherit;
+	    font-size: 1.25em;
+}
+#comments footer a {
+	color: inherit;
+}
+
+#comments .comment-metadata {
+	margin-bottom: 10px 0 0;
+
+}
+
+
+
+
+
+
 /* === RESOURCES === */
 
 .resource {
@@ -1007,6 +1046,7 @@ footer a:hover {
 	margin: 0 0 10px;
 	padding: 0 0 10px;
 	border-bottom: solid 1px #ddd;
+	font-weight: 700;
 }
 
 .widget ul {

@@ -15,6 +15,5 @@ get_header(); ?>
 
 			<?php get_template_part('content', 'getintouch'); ?>
 
-  
 	
 <?php get_footer(); ?>
