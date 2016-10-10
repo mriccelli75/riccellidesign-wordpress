@@ -53,10 +53,18 @@ function riccellidesign_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'riccellidesign' ),
-	) );
+	
+
+	function register_my_menus() {
+		  register_nav_menus(
+		    array(
+		      'new-menu' => __( 'New Menu', 'riccellidesign' ),
+		      'primary' => esc_html__( 'Primary', 'riccellidesign' )
+		      
+		    )
+		  );
+	}
+add_action( 'init', 'register_my_menus' );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -158,3 +166,6 @@ function new_excerpt_more($more) {
 	return '... <a class="moretag" href="'. get_permalink($post->ID) . '"> continue reading &raquo;</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+
+

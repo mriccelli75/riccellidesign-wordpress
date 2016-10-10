@@ -673,6 +673,7 @@ form.search-form .input-group input[type="submit"] {
 form textarea {
 	width: 100%;
 	border: none;
+	background: rgba(0,0,0,0.02)
 }
 
 form textarea:focus {
@@ -755,12 +756,12 @@ section.main-content {
 }
 
 .feature-image-default {
-	background: url('/wp-content/themes/bootstrap2wordpress/assets/img/stuff-feature.jpg') no-repeat;
+	background: url('/wp-content/themes/riccellidesign/assets/img/hero-bg.jpg') no-repeat;
 	background-size: cover;
 }
 
 .feature-image-default-alt {
-	background: url('/wp-content/themes/bootstrap2wordpress/assets/img/hipster-stuff.jpg') no-repeat;
+	background: url('/wp-content/themes/riccellidesign/assets/img/hero-bg.jpg') no-repeat;
 	background-size: cover;
 }
 
@@ -769,6 +770,7 @@ section.main-content {
 	vertical-align: middle;
 	text-align: center;
 	color: white;
+	font-weight: 700;
 }
 
 
@@ -969,6 +971,7 @@ footer a:hover {
 
 #comments h3 {
 	text-align: center;
+	font-weight: 700;
 }
 
 #comments h4 {
@@ -1008,18 +1011,28 @@ footer a:hover {
 #comments footer {
 	background: none;
 	color: inherit;
-	    font-size: 1.25em;
+	font-size: 1.25em;
+	padding-top: 10px;
 }
 #comments footer a {
 	color: inherit;
+	font-size: 0.75em;
 }
 
 #comments .comment-metadata {
 	margin-bottom: 10px 0 0;
+	font-size: 1em;
 
 }
 
+#comments footer a.comment-edit-link {
+	font-style: italic;
+}
 
+#comments .comment-content p {
+	font-size: 1em;
+	color: rgba(46, 60, 64, 0.75);
+}
 
 
 

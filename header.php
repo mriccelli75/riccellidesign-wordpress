@@ -69,18 +69,33 @@
 						</a>
 					</div><!-- navbar-header -->
 
-					<?php 
-							wp_nav_menu ( $arrayName = array(
 
-								'theme_location' => 'primary', 
-								'container' 		=> 			'nav',
-								'container_class'		=>	'navbar-collapse collapse',
-								'menu_class'			=>		'nav navbar-nav navbar-right'
+						<?php
+						     if(is_page('Home')){ 
 
-								) );
+						     //or whatever your home page is called
+						       wp_nav_menu ( $arrayName = array( 
 
-						?>
-					
+						       	'theme_location' => 'primary', 
+						       	'container' => 'nav', 
+						       	'container_class' =>  'navbar-collapse collapse', 
+						       	'menu_class'    =>  'nav navbar-nav navbar-right' 
+
+						       	) );
+
+						     } else{
+
+						        //INSERT CODE FOR BLOG MENU
+						     	wp_nav_menu ( $arrayName = array(
+
+											'theme_location' => 'new-menu', 
+											'container' 		=> 			'nav',
+											'container_class'		=>	'navbar-collapse collapse',
+											'menu_class'			=>		'nav navbar-nav navbar-right'
+
+											) );
+						       }
+						 ?>
 				</div><!-- container -->
 			</div>
 		

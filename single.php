@@ -9,7 +9,10 @@
 
 get_header(); ?>
 
-<?php get_template_part('content','hero'); ?>
+	<section class="feature-image feature-image-default" data-type="background" data-speed="2">
+		<h1 class="page-title">Blog</h1>
+	</section>
+	
 
 <!-- BLOG CONTENT 
 	============================================================================= -->
