@@ -437,6 +437,12 @@ p {
 	color: #2e3c40;
 }
 
+::selection {
+    background: #333;
+    color: #fff;
+    text-shadow: 0 0 transparent;
+}
+
 /* ==== custom navbar ==== */
 
 .navbar-default {
